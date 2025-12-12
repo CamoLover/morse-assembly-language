@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>~*~*~ MORSE ASSEMBLY LANGUAGE ~*~*~ THE ULTIMATE 1337 PROGRAMMING EXPERIENCE!!!!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+        
+        body {
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0000, #00ff00, #0000ff);
+            background-size: 400% 400%;
+            animation: rainbow-bg 2s ease infinite;
+            font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        @keyframes rainbow-bg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.5); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        @keyframes wiggle {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+        
+        @keyframes slideInOut {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); color: #ff0000; }
+            25% { transform: scale(1.1); color: #00ff00; }
+            50% { transform: scale(1.2); color: #0000ff; }
+            75% { transform: scale(1.1); color: #ffff00; }
+            100% { transform: scale(1); color: #ff00ff; }
+        }
+        
+        .spinning {
+            animation: spin 3s linear infinite;
+            display: inline-block;
+        }
+        
+        .bouncing {
+            animation: bounce 1s infinite;
+        }
+        
+        .blinking {
+            animation: blink 1s infinite;
+        }
+        
+        .wiggling {
+            animation: wiggle 2s infinite;
+        }
+        
+        .pulsing {
+            animation: pulse 1.5s infinite;
+        }
+        
+        .rainbow-text {
+            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 400% 400%;
+            animation: rainbow-bg 3s ease infinite;
+        }
+        
+        .container {
+            background: repeating-linear-gradient(
+                45deg,
+                #000 0px,
+                #000 10px,
+                #ff00ff 10px,
+                #ff00ff 20px
+            );
+            border: 10px solid;
+            border-image: linear-gradient(45deg, #ff0000, #ffff00, #00ff00, #00ffff, #ff00ff) 1;
+            padding: 20px;
+            margin: 20px;
+        }
+        
+        .feature-box {
+            background: radial-gradient(circle, #ff00ff 0%, #00ffff 50%, #ffff00 100%);
+            border: 5px dashed #ff0000;
+            margin: 10px;
+            padding: 15px;
+            transform: rotate(-2deg);
+            box-shadow: 10px 10px 0px #000000;
+        }
+        
+        .feature-box:nth-child(even) {
+            transform: rotate(2deg);
+            background: radial-gradient(circle, #00ff00 0%, #ff0000 50%, #0000ff 100%);
+        }
+        
+        .code-block {
+            background: #000000;
+            color: #00ff00;
+            border: 3px solid #ff00ff;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            animation: wiggle 2s infinite;
+            position: relative;
+        }
+        
+        .code-block::before {
+            content: "XXX DANGER ZONE XXX";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff0000;
+            color: #ffffff;
+            padding: 5px;
+            font-weight: bold;
+            animation: blink 0.5s infinite;
+        }
+        
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            background: #ffff00;
+            color: #ff0000;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+        
+        .marquee div {
+            animation: slideInOut 5s linear infinite;
+        }
+        
+        .visitor-counter {
+            background: #000000;
+            color: #00ff00;
+            border: 2px solid #ff00ff;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .under-construction {
+            background: #ffff00;
+            color: #ff0000;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border: 5px solid #000000;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .under-construction::before,
+        .under-construction::after {
+            content: "[!]";
+            font-size: 2em;
+            animation: bounce 1s infinite;
+        }
+        
+        .button {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            border: 3px solid #000000;
+            color: #000000;
+            font-weight: bold;
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            animation: pulse 2s infinite;
+            cursor: pointer;
+            font-family: 'Comic Sans MS', cursive;
+        }
+        
+        .button:hover {
+            animation: spin 0.5s linear infinite;
+        }
+        
+        h1 {
+            font-size: 3em;
+            text-shadow: 3px 3px 0 #000000;
+            animation: bounce 2s infinite;
+        }
+        
+        h2 {
+            font-size: 2em;
+            animation: wiggle 3s infinite;
+            text-decoration: underline;
+        }
+        
+        .fire-text {
+            color: #ff0000;
+            text-shadow: 0 0 20px #ff4500, 0 0 40px #ff4500, 0 0 60px #ff4500;
+            animation: pulse 1s infinite;
+        }
+        
+        .explosion {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10em;
+            animation: spin 2s linear infinite;
+            z-index: -1;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="explosion">BOOM</div>
+    
+    <div class="marquee">
+        <div>*** WELCOME TO THE MOST EPIC PROGRAMMING LANGUAGE EVER CREATED!!! *** MORSE ASSEMBLY WILL BLOW YOUR MIND!!! ***</div>
+    </div>
+    
+    <div class="container">
+        <center>
+            <h1 class="rainbow-text spinning">
+                ~~*~~ MORSE ASSEMBLY LANGUAGE ~~*~~
+            </h1>
+            
+            <div class="spinning">***</div>
+            <div class="spinning">XXX</div>
+            <div class="spinning">!!!</div>
+            <div class="spinning">[PC]</div>
+            <div class="spinning">^^^</div>
+            
+            <h2 class="fire-text pulsing">
+                <span class="blinking">THE ABSOLUTE BEST</span> 
+                <span class="bouncing">PROGRAMMING LANGUAGE</span> 
+                <span class="wiggling">IN THE WORLD!!!</span>
+            </h2>
+            
+            <div class="under-construction">
+                <div class="pulsing fire-text">
+                    "Did you ever think 'Man, assembly is too easy, why can't I write assembly in Morse code?' Well here you go!"
+                </div>
+            </div>
+            
+            <div class="visitor-counter">
+                <div class="blinking">[X] VISITOR COUNT: 1337420 [X]</div>
+                <div>LAST UPDATED: RIGHT NOW!!!</div>
+            </div>
+        </center>
+        
+        <h2 class="rainbow-text">*** WHY IS MORSE ASSEMBLY SO AMAZING??? ***</h2>
+        
+        <div class="feature-box wiggling">
+            <h3 class="spinning pulsing">*** BLAZINGLY FAST ***</h3>
+            <p class="bouncing">Because nothing says PERFORMANCE like translating dots and dashes into MACHINE CODE!!!</p>
+        </div>
+        
+        <div class="feature-box">
+            <h3 class="spinning pulsing">*** BIG BRAIN ENERGY ***</h3>
+            <p class="wiggling">Finally, a language that makes Assembly look like CHILD'S PLAY! Impress your friends with your TELEGRAPH SKILLS!!!</p>
+        </div>
+        
+        <div class="feature-box wiggling">
+            <h3 class="spinning pulsing">*** REVOLUTIONARY ***</h3>
+            <p class="bouncing">The FIRST programming language that doubles as a HISTORICAL COMMUNICATION METHOD!</p>
+        </div>
+        
+        <div class="feature-box">
+            <h3 class="spinning pulsing fire-text">*** EXCLUSIVE CLUB ***</h3>
+            <p class="wiggling blinking">Join the ELITE CLUB of developers who think regular assembly ISN'T CHALLENGING ENOUGH!</p>
+        </div>
+        
+        <center>
+            <h2 class="rainbow-text bouncing">[!] SEE IT IN ACTION!!! [!]</h2>
+            
+            <div class="code-block">
+                <div class="blinking">morse_hello_world.mal</div>
+                <pre class="pulsing">
+// Hello World in Morse Assembly Language
+.-- .... .. .-.. .   .-.. --- --- .--.   // WHILE LOOP
+    .... . .-.. .-.. ---   .-- --- .-. .-.. -..   // HELLO WORLD
+    .--. .-. .. -. -   // PRINT
+    .. -. -.-.   // INC
+. -. -..   // END
+
+// Output: Hello World!
+// Status: MIND = BLOWN !!!
+                </pre>
+            </div>
+            
+            <h2 class="fire-text spinning">*** READY TO TRANSCEND REALITY??? ***</h2>
+            
+            <div class="wiggling">
+                <a href="https://github.com/CamoLover/morse-assembly-language" target="_blank" class="button bouncing" style="text-decoration: none;">READ THE DOCS!!!</a>
+            </div>
+            
+            <div class="under-construction">
+                <div class="rainbow-text pulsing">
+                    [!] WARNING: MAY CAUSE EXTREME SATISFACTION AND INABILITY TO USE REGULAR PROGRAMMING LANGUAGES [!]
+                </div>
+            </div>
+        </center>
+        
+        <div class="marquee">
+            <div>*** JOIN THE MORSE REVOLUTION!!! *** TELEGRAPH YOUR WAY TO PROGRAMMING GLORY!!! ***</div>
+        </div>
+        
+        <center>
+            <div class="visitor-counter">
+                <div class="blinking fire-text">© 2000 MORSE ASSEMBLY LANGUAGE - WHERE PROGRAMMING MEETS TELEGRAPHY!!!</div>
+                <div class="spinning">*** WEBMASTER: l33t_c0d3r_42 ***</div>
+            </div>
+        </center>
+    </div>
+    
+    <script>
+        // Add some random blinking elements
+        setInterval(() => {
+            const elements = document.querySelectorAll('*');
+            const randomElement = elements[Math.floor(Math.random() * elements.length)];
+            randomElement.style.animation = 'blink 0.1s';
+            setTimeout(() => {
+                randomElement.style.animation = '';
+            }, 100);
+        }, 2000);
+        
+        // Alert on click
+        document.addEventListener('click', () => {
+            alert('*** WELCOME TO THE FUTURE OF PROGRAMMING!!! ***');
+        });
+    </script>
+</body>
+</html>
