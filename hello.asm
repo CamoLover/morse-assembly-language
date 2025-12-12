@@ -1,0 +1,11 @@
+; Hello in assembly
+MOV AX, 72
+OUT AX
+MOV AX, 101
+OUT AX
+MOV AX, 108
+OUT AX
+OUT AX
+MOV AX, 111
+OUT AX
+HLT
