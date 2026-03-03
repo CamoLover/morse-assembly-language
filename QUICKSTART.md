@@ -37,13 +37,13 @@ HLT
 ### 2. Convert to Morse (Optional)
 
 ```bash
-py morse_assembler.py program.asm program.morse
+py src/morse_assembler.py program.asm program.morse
 ```
 
 ### 3. Run Your Program
 
 ```bash
-py morse_interpreter.py program.morse
+py src/morse_interpreter.py program.morse
 ```
 
 Output: `8`
@@ -94,12 +94,12 @@ HLT
 
 ### Decode Some Morse
 ```bash
-python3 morse_interpreter.py --decode ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+python3 src/morse_interpreter.py --decode ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
 ```
 
 ### Encode Some Text
 ```bash
-python3 morse_interpreter.py --encode "HELLO WORLD"
+python3 src/morse_interpreter.py --encode "HELLO WORLD"
 ```
 
 ## Tips for Writing MAL

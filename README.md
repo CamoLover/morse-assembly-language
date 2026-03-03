@@ -20,7 +20,7 @@ Morse Assembly Language (MAL) is an Assembly-like language where every instructi
 No installation needed! Just run the Python scripts:
 
 ```bash
-chmod +x morse_interpreter.py morse_assembler.py
+chmod +x src/morse_interpreter.py src/morse_assembler.py
 ```
 
 ## Usage
@@ -28,23 +28,23 @@ chmod +x morse_interpreter.py morse_assembler.py
 ### Running a Morse Assembly Program
 
 ```bash
-py morse_interpreter.py program.morse
+py src/morse_interpreter.py program.morse
 ```
 
 ### Converting Regular Assembly to Morse
 
 ```bash
-py morse_assembler.py input.asm output.morse
+py src/morse_assembler.py input.asm output.morse
 ```
 
 ### Encoding/Decoding Text
 
 ```bash
 # Encode text to morse
-py morse_interpreter.py --encode "Hello World"
+py src/morse_interpreter.py --encode "Hello World"
 
 # Decode morse to text
-py morse_interpreter.py --decode ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+py src/morse_interpreter.py --decode ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
 ```
 
 ## Syntax
