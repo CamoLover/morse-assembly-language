@@ -1,4 +1,4 @@
-; Hello in assembly
+; Hello, world in assembly
 MOV AX, 72
 OUT AX
 MOV AX, 101
@@ -7,5 +7,19 @@ MOV AX, 108
 OUT AX
 OUT AX
 MOV AX, 111
+OUT AX
+MOV AX, 44
+OUT AX
+MOV AX, 32
+OUT AX
+MOV AX, 119
+OUT AX
+MOV AX, 111
+OUT AX
+MOV AX, 114
+OUT AX
+MOV AX, 108
+OUT AX
+MOV AX, 100
 OUT AX
 HLT
